@@ -1,3 +1,12 @@
+# Finished pages
+- Home `/`
+- Login `/login`
+- Browse `/browse`
+
+
+
+
+
 # Getting Started with Create React Root
 
 This project was bootstrapped with [Create React Root](https://github.com/facebook/create-react-app).
