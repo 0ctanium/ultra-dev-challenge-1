@@ -125,16 +125,47 @@ const Hero = styled.div`
     justify-content: flex-end;
     flex-direction: column;
     
-    & .title {
+    & .title-image {
+      min-height: 13.2vw;
+      position: relative;
+      margin-bottom: 1.2vw;
+      display: flex;
+      justify-content: center;
+      align-items: center;
       
+      & img {
+        width: 100%;
+      }
     }
     
-    & .action {
+    & .title {
+      color: #fff;
+      font-family: ${props => props.theme.font.sans};
+      font-size: 1.4vw;
+      font-weight: 400;
+      text-shadow: 2px 2px 4px rgb(0 0 0 / 45%);
+      margin-top: .5vw;
+    }
+    
+    & .actions {
       display: flex;
+      flex-direction: row;
+      margin-top: 1.5vw;
       
-      ${Button} {
+      & ${Button} {
         margin-right: 1rem;
         margin-bottom: 1rem;
+        
+        & .play {
+          font-size: 23px;
+          line-height: 35px;
+          font-weight: 700;
+          color: #000;
+        }
+        
+        & .more {
+          
+        }
       }
     }
   }
@@ -182,11 +213,13 @@ const Browse: React.FC = () => {
             </Header>
             <Hero>
                 <div className="info">
-                    <img src="/static/casa_de_papel-title.png" alt="title" />
+                    <div className="title-image">
+                        <img src="/static/casa_de_papel-title.png" alt="title" />
+                    </div>
                     <h3 className="title">Huit voleurs font une prise d'otages dans la Maison royale de la Monnaie d'Espagne, tandis qu'un génie du crime manipule la police pour mettre son plan à exécution.</h3>
                     <div className="actions">
-                        <Button><BiPlay/> Lecture</Button>
-                        <Button><BiInfoCircle /> Plus d'infos</Button>
+                        <Button className="play"><BiPlay/> Lecture</Button>
+                        <Button className="more"><BiInfoCircle /> Plus d'infos</Button>
                     </div>
                 </div>
             </Hero>
